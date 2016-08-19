@@ -14,4 +14,11 @@ public class HomeController {
         model.addAttribute("springVersion", SpringVersion.getVersion());
         return "welcome";
     }
+
+    @RequestMapping("/about")
+    public String getAbout() {
+        return "about";
+    }
+
+
 }

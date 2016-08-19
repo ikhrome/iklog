@@ -3,6 +3,7 @@
 <t:page>
     <jsp:attribute name="title">Home</jsp:attribute>
     <jsp:body>
+        <a href="/about">About Us</a>
         <h1>Hello, my friends!</h1>
         <p>This message comes from controller:</p>
         <p style="font-size: 24px;">${message}</p>
