@@ -12,6 +12,11 @@
     <title>
         <jsp:invoke fragment="title" /> &rsaquo; IK Blog
     </title>
+    <style type="text/css">
+        body {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+        }
+    </style>
     <jsp:invoke fragment="header" />
 </head>
 <body>
