@@ -58,6 +58,7 @@ public class ApplicationConfiguration extends WebMvcConfigurerAdapter {
 
         sessionBuilder.scanPackages("ru.ikhrome.model");
         sessionBuilder.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        sessionBuilder.setProperty("hibernate.enable_lazy_load_no_trans", "true");
 
         return sessionBuilder.buildSessionFactory();
     }
