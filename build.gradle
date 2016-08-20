@@ -3,6 +3,7 @@ buildscript {
     ext.jstlVersion = '1.2.1'
     ext.jspApiVersion = '2.2'
     ext.servletApiVersion = '3.1.0'
+    ext.hibernateVersion = '5.2.2.Final'
 }
 
 group 'ru.ikhrome'
@@ -19,10 +20,11 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile "org.springframework:spring-test:$springVersion"
 
     compile "javax.servlet:javax.servlet-api:$servletApiVersion"
     compile "javax.servlet.jsp:jsp-api:$jspApiVersion"
     compile "javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:$jstlVersion"
     compile "org.springframework:spring-webmvc:$springVersion"
-    compile "org.springframework:spring-test:$springVersion"
+
 }
