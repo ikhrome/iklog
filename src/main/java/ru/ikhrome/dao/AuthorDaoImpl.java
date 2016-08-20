@@ -22,6 +22,11 @@ public class AuthorDaoImpl implements AuthorDAO {
     }
 
     @Override
+    public Author get(int id) {
+        return null;
+    }
+
+    @Override
     public void saveOrUpdate(Author author) {
 
     }

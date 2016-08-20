@@ -8,6 +8,8 @@ public interface PostDAO {
 
     List<Post> list();
 
+    Post get(int id);
+
     void saveOrUpdate(Post post);
 
     void delete(int id);

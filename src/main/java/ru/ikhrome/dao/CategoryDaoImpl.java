@@ -24,6 +24,11 @@ public class CategoryDaoImpl implements CategoryDAO {
     }
 
     @Override
+    public Category get(int id) {
+        return null;
+    }
+
+    @Override
     public void saveOrUpdate(Category category) {
 
     }
