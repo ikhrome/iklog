@@ -4,6 +4,10 @@ buildscript {
     ext.jspApiVersion = '2.2'
     ext.servletApiVersion = '3.1.0'
     ext.hibernateVersion = '5.2.2.Final'
+    ext.mysqlConnectorVersion = '5.1.38'
+    ext.dbcpVersion = '2.1.1'
+    ext.slf4jVersion = '1.7.21'
+    ext.logbackVersion = '1.1.7'
 }
 
 group 'ru.ikhrome'
@@ -19,12 +23,24 @@ repositories {
 }
 
 dependencies {
+    // Test scope
     testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile "org.springframework:spring-test:$springVersion"
-
+    // Servlet
     compile "javax.servlet:javax.servlet-api:$servletApiVersion"
     compile "javax.servlet.jsp:jsp-api:$jspApiVersion"
     compile "javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:$jstlVersion"
+    // Spring 4
     compile "org.springframework:spring-webmvc:$springVersion"
-
+    compile "org.springframework:spring-tx:$springVersion"
+    compile "org.springframework:spring-orm:$springVersion"
+    // Hibernate
+    compile "org.hibernate:hibernate-core:$hibernateVersion"
+    compile "org.hibernate:hibernate-entitymanager:$hibernateVersion"
+    // Database connectors
+    compile "mysql:mysql-connector-java:$mysqlConnectorVersion"
+    compile "org.apache.commons:commons-dbcp2:$dbcpVersion"
+    // Logging frameworks
+    compile "org.slf4j:slf4j-api:$slf4jVersion"
+    compile "ch.qos.logback:logback-classic:$logbackVersion"
 }
