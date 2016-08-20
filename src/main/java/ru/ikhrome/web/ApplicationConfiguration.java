@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
+import ru.ikhrome.dao.*;
 
 import javax.sql.DataSource;
 
@@ -55,6 +56,26 @@ public class ApplicationConfiguration {
     public HibernateTransactionManager getHibernateTransactionManager(SessionFactory sessionFactory) {
 
         return new HibernateTransactionManager(sessionFactory);
+    }
+
+    // DAO beans
+
+    @Autowired
+    @Bean(name = "postDao")
+    public PostDAO getPostDao(SessionFactory sessionFactory) {
+        return new PostDaoImpl(sessionFactory);
+    }
+
+    @Autowired
+    @Bean(name = "authorDao")
+    public AuthorDAO getAuthorDao(SessionFactory sessionFactory) {
+        return new AuthorDaoImpl(sessionFactory);
+    }
+
+    @Autowired
+    @Bean(name = "categoryDao")
+    public CategoryDAO getCategoryDao(SessionFactory sessionFactory) {
+        return new CategoryDaoImpl(sessionFactory);
     }
 
 }
