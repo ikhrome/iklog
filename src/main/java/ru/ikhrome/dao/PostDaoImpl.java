@@ -41,6 +41,7 @@ public class PostDaoImpl implements PostDAO {
     }
 
     @Override
+    @Transactional
     public void delete(int id) {
         Post postToRemove = new Post();
         postToRemove.setId(id);
