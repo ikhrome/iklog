@@ -11,6 +11,8 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 import ru.ikhrome.dao.*;
@@ -22,7 +24,14 @@ import javax.sql.DataSource;
 @EnableWebMvc
 @EnableTransactionManagement
 @ComponentScan(basePackages = "ru.ikhrome.controller")
-public class ApplicationConfiguration {
+public class ApplicationConfiguration extends WebMvcConfigurerAdapter {
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry
+                .addResourceHandler("/resources/**")
+                .addResourceLocations("/WEB-INF/resources/");
+    }
 
     @Bean
     public ViewResolver viewResolver() {
