@@ -7,6 +7,6 @@ It's just a test for future projects. Spring is awesome and powerful, but to und
 - [x] Add all dependencies in Gradle project
 - [x] Include WebMVC and make template in `.tag` file
 - [x] Say _Hello_ from Spring to users!
-- [ ] Include Hibernate
-- [ ] Make models and DA objects
-- [ ] Create `@Bean` for Hibernate and SessionManager in `ApplicationConfiguration.java`
+- [x] Include Hibernate
+- [x] Make models and DA objects
+- [x] Create `@Bean` for Hibernate and SessionManager in `ApplicationConfiguration.java`
