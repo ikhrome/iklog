@@ -30,6 +30,7 @@ dependencies {
     compile "javax.servlet:javax.servlet-api:$servletApiVersion"
     compile "javax.servlet.jsp:jsp-api:$jspApiVersion"
     compile "javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:$jstlVersion"
+    compile "jstl:jstl:1.2"
     // Spring 4
     compile "org.springframework:spring-webmvc:$springVersion"
     compile "org.springframework:spring-tx:$springVersion"
