@@ -1,6 +1,7 @@
 package ru.ikhrome.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "posts")
@@ -33,5 +34,8 @@ public class Post {
 
     @Column(name = "status")
     private int status;
+
+    @Column(name = "published")
+    private Date published;
 
 }
