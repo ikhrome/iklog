@@ -1,3 +1,10 @@
+buildscript {
+    ext.springVersion = '4.3.2.RELEASE'
+    ext.jstlVersion = '1.2.1'
+    ext.jspApiVersion = '2.2'
+    ext.servletApiVersion = '3.1.0'
+}
+
 group 'ru.ikhrome'
 version '1.0-SNAPSHOT'
 
@@ -12,9 +19,10 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
-    compile group: 'javax.servlet.jsp', name: 'jsp-api', version: '2.2'
-    compile group: 'javax.servlet.jsp.jstl', name: 'javax.servlet.jsp.jstl-api', version: '1.2.1'
-    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.2.RELEASE'
-    compile group: 'org.springframework', name: 'spring-test', version: '4.3.2.RELEASE'
+
+    compile "javax.servlet:javax.servlet-api:$servletApiVersion"
+    compile "javax.servlet.jsp:jsp-api:$jspApiVersion"
+    compile "javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:$jstlVersion"
+    compile "org.springframework:spring-webmvc:$springVersion"
+    compile "org.springframework:spring-test:$springVersion"
 }
