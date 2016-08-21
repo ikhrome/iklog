@@ -62,4 +62,12 @@ public class PostDaoImpl implements PostDAO {
 
         return null;
     }
+
+    @Transactional
+    public Post getLatestPost() {
+        return (Post) sessionFactory.getCurrentSession()
+                .createQuery("from Post order by id DESC")
+                .setMaxResults(1)
+                .uniqueResult();
+    }
 }
