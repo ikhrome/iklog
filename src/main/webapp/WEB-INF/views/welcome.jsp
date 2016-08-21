@@ -28,10 +28,12 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <a href="/blog">
-                                <h3>Welcome to my thoughts!</h3>
+                            <a href="/blog/post/${latestPost.id}">
+                                <h3>${latestPost.title}</h3>
                             </a>
-                            <p>Some cool thoughts will happen!</p>
+                            <p>
+                                ${latestPost.description}
+                            </p>
                         </div>
                     </div>
                 </div>
