@@ -63,6 +63,7 @@ public class PostDaoImpl implements PostDAO {
         return null;
     }
 
+    @Override
     @Transactional
     public Post getLatestPost() {
         return (Post) sessionFactory.getCurrentSession()

@@ -13,4 +13,6 @@ public interface PostDAO {
     void saveOrUpdate(Post post);
 
     void delete(int id);
+
+    Post getLatestPost();
 }
